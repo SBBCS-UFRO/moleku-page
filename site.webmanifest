@@ -1,0 +1,16 @@
+{
+  "name": "Moleku",
+  "short_name": "Moleku",
+  "description": "Reaction-driven virtual chemical library generation, candidate prioritization and local ADMET.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "assets/moleku-icon.png",
+      "sizes": "2000x2000",
+      "type": "image/png"
+    }
+  ]
+}

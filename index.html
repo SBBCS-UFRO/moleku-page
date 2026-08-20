@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Moleku — open-source desktop software for reaction-driven virtual chemical library generation, candidate prioritization and local ADMET workflows.">
+  <title>Moleku — Reaction-driven virtual chemical libraries</title>
+
+  <link rel="icon" type="image/png" href="assets/moleku-icon.png">
+  <link rel="apple-touch-icon" href="assets/moleku-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css?v=20260820-platform">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Desktop editorial rail -->
+  <aside class="rail" id="rail">
+    <div class="rail-top">
+      <a class="rail-brand" href="#home" aria-label="Moleku home">
+        <img src="assets/moleku-wordmark-navy.png" alt="Moleku">
+      </a>
+
+      <div class="rail-status">
+        <span class="status-dot"></span>
+        <span data-i18n="openSource">Open-source desktop software</span>
+      </div>
+
+      <p class="rail-intro" data-i18n="railIntro">
+        Reaction-driven virtual library generation, candidate prioritization and local ADMET in one focused application.
+      </p>
+
+      <div class="rail-actions">
+        <button class="rail-primary" id="railDownload" type="button">
+          <span data-download-label-compact>Platform</span>
+          <span aria-hidden="true">↓</span>
+        </button>
+        <a class="rail-secondary" href="https://github.com/pipelzm/Moleku" target="_blank" rel="noopener">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <a class="rail-secondary rail-feedback" href="https://mlkfeed.framer.website/" target="_blank" rel="noopener">
+          Feedback <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="rail-nav" aria-label="Section navigation">
+      <a href="#home" class="active" data-section-link="home">
+        <span class="nav-number">5</span>
+        <span class="nav-copy"><strong data-i18n="navHome">Home</strong><small data-i18n="navHomeSub">Overview · Download</small></span>
+      </a>
+      <a href="#product" data-section-link="product">
+        <span class="nav-number">4</span>
+        <span class="nav-copy"><strong data-i18n="navProduct">Product</strong><small data-i18n="navProductSub">Generate · Prioritize · ADMET</small></span>
+      </a>
+      <a href="#workflows" data-section-link="workflows">
+        <span class="nav-number">3</span>
+        <span class="nav-copy"><strong data-i18n="navWorkflows">Pipeline</strong><small data-i18n="navWorkflowsSub">Reagents · Library · ADMET</small></span>
+      </a>
+      <a href="#research" data-section-link="research">
+        <span class="nav-number">2</span>
+        <span class="nav-copy"><strong data-i18n="navResearch">Research</strong><small data-i18n="navResearchSub">Methods · Citation · License</small></span>
+      </a>
+      <a href="#download" data-section-link="download">
+        <span class="nav-number">1</span>
+        <span class="nav-copy"><strong data-i18n="navDownload">Download</strong><small>Windows · macOS · Linux</small></span>
+      </a>
+    </nav>
+
+    <div class="rail-bottom">
+      <button class="lang-button flag-button" id="langToggle" type="button"
+              aria-label="Cambiar a español" title="Español">
+        <img id="langFlag" src="assets/flag-es.svg" alt="" aria-hidden="true">
+      </button>
+      <span class="rail-footnote">Moleku · Apache-2.0</span>
+    </div>
+  </aside>
+
+  <!-- Mobile header -->
+  <header class="mobile-header">
+    <a href="#home" class="mobile-brand"><img src="assets/moleku-wordmark-navy.png" alt="Moleku"></a>
+    <div class="mobile-actions">
+      <button class="mobile-lang flag-button" id="mobileLangToggle" type="button"
+              aria-label="Cambiar a español" title="Español">
+        <img id="mobileLangFlag" src="assets/flag-es.svg" alt="" aria-hidden="true">
+      </button>
+      <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#product" data-i18n="navProduct">Product</a>
+      <a href="#workflows" data-i18n="navWorkflows">Workflows</a>
+      <a href="#research" data-i18n="navResearch">Research</a>
+      <a href="#download" data-i18n="navDownload">Download</a>
+      <a href="https://github.com/pipelzm/Moleku" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://mlkfeed.framer.website/" target="_blank" rel="noopener">Feedback ↗</a>
+    </nav>
+  </header>
+
+  <main class="main" id="main">
+    <!-- HOME / full-screen Strida-inspired editorial panel -->
+    <section class="hero panel panel-dark" id="home" data-section="home">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="hero-topline">
+        <span>Moleku / 2026</span>
+        <span data-i18n="heroMeta">Cheminformatics · Desktop · Open source</span>
+      </div>
+
+      <div class="hero-title-wrap">
+        <h1>Moleku</h1>
+        <p data-i18n-html="heroTagline">Build chemical libraries.<br>Explore molecular possibilities.</p>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-description">
+          <span class="eyebrow-light" data-i18n="heroEyebrow">Reaction-driven by design</span>
+          <p data-i18n="heroDescription">
+            Generate reaction-based virtual libraries, calculate descriptors, prioritize candidates and move directly into local ADMET analysis.
+          </p>
+        </div>
+        <button class="hero-download" id="heroDownload" type="button">
+          <span data-download-label>Download Moleku</span>
+          <span class="download-arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Product: selected capabilities -->
+    <section class="panel panel-black" id="product" data-section="product">
+      <div class="section-topline">
+        <h2 data-i18n="productTitle">Product</h2>
+        <span data-i18n="productMeta">Selected capabilities · 01—03</span>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card card-orange reveal">
+          <div class="project-index">01</div>
+          <div class="project-copy">
+            <span class="project-kicker" data-i18n="generateKicker">Library Builder</span>
+            <h3 data-i18n="generateTitle">Reaction-driven generation</h3>
+            <p data-i18n="generateText">
+              Load reagent datasets, enumerate combinations and apply reaction SMARTS through curated MCR workflows.
+            </p>
+            <div class="tag-row"><span>SMILES</span><span>SMARTS</span><span>RDKit</span></div>
+          </div>
+          <div class="project-visual visual-generation" aria-hidden="true">
+            <div class="reagent-cloud left">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="core core-new-mark"><img src="assets/moleku-product-mark.png" alt="Moleku symbol"></div>
+            <div class="reagent-cloud right">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card-paper reveal">
+          <div class="project-index">02</div>
+          <div class="project-copy">
+            <span class="project-kicker" data-i18n="priorityKicker">Candidate Review</span>
+            <h3 data-i18n="priorityTitle">Explicit prioritization</h3>
+            <p data-i18n="priorityText">
+              Calculate physicochemical descriptors, detect duplicates and classify compounds with configurable rules.
+            </p>
+            <div class="tag-row dark-tags"><span>Lipinski</span><span>Ghose</span><span>Veber</span><span>Egan</span><span>Muegge</span></div>
+          </div>
+          <div class="project-visual visual-priority">
+            <div class="metric"><span>MW</span><b><i style="width:74%"></i></b><strong>412.5</strong></div>
+            <div class="metric"><span>cLogP</span><b><i style="width:53%"></i></b><strong>3.1</strong></div>
+            <div class="metric"><span>TPSA</span><b><i style="width:66%"></i></b><strong>84.2</strong></div>
+            <div class="metric"><span>HBD</span><b><i style="width:31%"></i></b><strong>2</strong></div>
+            <div class="metric-result"><i></i><span>Ideal candidate</span><small>Any / All</small></div>
+          </div>
+        </article>
+
+        <article class="project-card card-blue reveal">
+          <div class="project-index">03</div>
+          <div class="project-copy">
+            <span class="project-kicker">ADMET</span>
+            <h3 data-i18n="admetTitle">Local analysis workspace</h3>
+            <p data-i18n="admetText">
+              Send shortlisted candidates directly into the integrated ADMET tab and export analyzed results without leaving Moleku.
+            </p>
+            <div class="tag-row"><span>Local</span><span>CSV</span><span>XLSX</span><span>PDF</span></div>
+          </div>
+          <div class="project-visual visual-admet">
+            <div class="admet-search">CC1=NN(...) <span>⌕</span></div>
+            <div class="admet-cells">
+              <div><small>Absorption</small><strong>High</strong></div>
+              <div><small>BBB</small><strong>Low</strong></div>
+              <div><small>Solubility</small><strong>Moderate</strong></div>
+              <div><small>Clearance</small><strong>Review</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Moleku pipeline -->
+    <section class="panel panel-paper" id="workflows" data-section="workflows">
+      <div class="section-topline dark-line">
+        <h2 data-i18n="workflowsTitle">Moleku pipeline</h2>
+        <span data-i18n="workflowsMeta">End-to-end workflow · 01—07</span>
+      </div>
+
+      <div class="workflow-intro pipeline-intro reveal">
+        <p class="oversized" data-i18n-html="workflowStatement">
+          From reagents to<br>
+          prioritized candidates.
+        </p>
+        <p class="workflow-note" data-i18n="workflowLead">
+          A single sequence connects reaction setup, virtual enumeration, filtering, local ADMET and research-ready export.
+        </p>
+      </div>
+
+      <div class="pipeline-list">
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">01</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker" data-i18n="pipelineInput">Input</span>
+            <h3 data-i18n="pipeline1Title">Load reagents</h3>
+          </div>
+          <p data-i18n="pipeline1Text">Import reaction-ready reagent datasets and prepare the building blocks used for library generation.</p>
+          <span class="pipeline-stage">SMILES</span>
+        </article>
+
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">02</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker" data-i18n="pipelineChemistry">Chemistry</span>
+            <h3 data-i18n="pipeline2Title">Select reaction system</h3>
+          </div>
+          <p data-i18n="pipeline2Text">Choose a supported multicomponent reaction and its curated reaction logic before enumeration.</p>
+          <span class="pipeline-stage">MCR</span>
+        </article>
+
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">03</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker" data-i18n="pipelineGeneration">Generation</span>
+            <h3 data-i18n="pipeline3Title">Enumerate the library</h3>
+          </div>
+          <p data-i18n="pipeline3Text">Generate virtual products from reagent combinations and track successful or failed transformations.</p>
+          <span class="pipeline-stage">SMARTS</span>
+        </article>
+
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">04</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker" data-i18n="pipelineCharacterize">Characterize</span>
+            <h3 data-i18n="pipeline4Title">Compute descriptors</h3>
+          </div>
+          <p data-i18n="pipeline4Text">Calculate physicochemical properties and establish the molecular profile of each generated candidate.</p>
+          <span class="pipeline-stage">RDKit</span>
+        </article>
+
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">05</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker" data-i18n="pipelinePrioritize">Prioritize</span>
+            <h3 data-i18n="pipeline5Title">Filter candidates</h3>
+          </div>
+          <p data-i18n="pipeline5Text">Apply duplicate control and configurable heuristic rules to separate candidates for further review.</p>
+          <span class="pipeline-stage">Any / All</span>
+        </article>
+
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">06</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker">ADMET</span>
+            <h3 data-i18n="pipeline6Title">Analyze locally</h3>
+          </div>
+          <p data-i18n="pipeline6Text">Move shortlisted structures into the integrated ADMET workspace without leaving the application.</p>
+          <span class="pipeline-stage">Local</span>
+        </article>
+
+        <article class="pipeline-row reveal">
+          <span class="pipeline-index">07</span>
+          <div class="pipeline-title">
+            <span class="pipeline-kicker" data-i18n="pipelineOutput">Output</span>
+            <h3 data-i18n="pipeline7Title">Export results</h3>
+          </div>
+          <p data-i18n="pipeline7Text">Prepare tables, reports and molecular files for downstream computational research and documentation.</p>
+          <span class="pipeline-stage">CSV · XLSX · PDF</span>
+        </article>
+      </div>
+
+      <div class="chemistry-module reveal">
+        <div class="chemistry-heading">
+          <div>
+            <span class="chemistry-kicker" data-i18n="chemistryKicker">Core chemistry</span>
+            <h3 data-i18n="chemistryTitle">Current reaction systems</h3>
+          </div>
+          <p data-i18n="chemistryLead">Three curated 3-component reaction modules currently define the generation layer of Moleku.</p>
+        </div>
+
+        <div class="chemistry-grid">
+          <article>
+            <span class="chemistry-index">01</span>
+            <div class="chemistry-equation">A + B + C <b>→</b> P</div>
+            <div class="chemistry-figure">
+              <img src="assets/biginelli_reaction_blend.png" alt="Biginelli reaction scheme">
+            </div>
+            <h4>Biginelli</h4>
+            <p data-i18n="biginelliCompact">3-CR · DHPM-oriented library generation</p>
+          </article>
+
+          <article>
+            <span class="chemistry-index">02</span>
+            <div class="chemistry-equation">A + B + C <b>→</b> P</div>
+            <div class="chemistry-figure">
+              <img src="assets/gbb_reaction_blend.png" alt="GBB reaction scheme">
+            </div>
+            <h4>GBB</h4>
+            <p data-i18n="gbbCompact">3-CR · Heterocycle-oriented library generation</p>
+          </article>
+
+          <article>
+            <span class="chemistry-index">03</span>
+            <div class="chemistry-equation">A + B + C <b>→</b> P</div>
+            <div class="chemistry-figure">
+              <img src="assets/gewald_reaction_blend.png" alt="Gewald reaction scheme">
+            </div>
+            <h4>Gewald</h4>
+            <p data-i18n="gewaldCompact">3-CR · Sulfur-heterocycle library generation</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="panel panel-orange" id="research" data-section="research">
+      <div class="section-topline orange-line">
+        <h2 data-i18n="researchTitle">Built for research</h2>
+        <span data-i18n="researchMeta">Transparent · Reproducible · Citable</span>
+      </div>
+
+      <div class="research-layout">
+        <div class="research-statement reveal">
+          <div class="research-symbols" aria-label="Research principles">
+            <article>
+              <div class="research-symbol" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M18 13 8 24l10 11M30 13l10 11-10 11M27 8l-6 32"/>
+                </svg>
+              </div>
+              <span data-i18n="license">Open-source license</span>
+            </article>
+            <article>
+              <div class="research-symbol" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="11" cy="12" r="4"/><circle cx="37" cy="24" r="4"/><circle cx="11" cy="36" r="4"/>
+                  <path d="M15 12h9c7 0 9 5 9 9M15 36h9c7 0 9-5 9-9"/>
+                </svg>
+              </div>
+              <span data-i18n="methods">Methods</span>
+            </article>
+            <article>
+              <div class="research-symbol" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M10 9h21l7 7v23H10z"/><path d="M31 9v8h7M16 25h16M16 31h12"/>
+                </svg>
+              </div>
+              <span data-i18n="citation">Citation</span>
+            </article>
+            <article>
+              <div class="research-symbol" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M8 11h32v26H8z"/><path d="m15 20 6 5-6 5M25 31h9"/>
+                </svg>
+              </div>
+              <span data-i18n="quickStart">Quick start</span>
+            </article>
+          </div>
+
+          <p data-i18n="researchStatement">
+            The website is the entry point. The scientific record remains directly accessible.
+          </p>
+        </div>
+
+        <div class="research-links reveal">
+          <a href="https://github.com/pipelzm/Moleku/blob/main/LICENSE" target="_blank" rel="noopener">
+            <span>01</span><strong data-i18n="license">Open-source license</strong><small>Apache License 2.0</small><em>↗</em>
+          </a>
+          <a href="https://github.com/pipelzm/Moleku/blob/main/METHODS.md" target="_blank" rel="noopener">
+            <span>02</span><strong data-i18n="methods">Methods</strong><small data-i18n="methodsSub">Computational workflow</small><em>↗</em>
+          </a>
+          <a href="https://github.com/pipelzm/Moleku/blob/main/CITATION.cff" target="_blank" rel="noopener">
+            <span>03</span><strong data-i18n="citation">Citation</strong><small>CITATION.cff</small><em>↗</em>
+          </a>
+          <a href="https://github.com/pipelzm/Moleku/blob/main/QUICKSTART.md" target="_blank" rel="noopener">
+            <span>04</span><strong data-i18n="quickStart">Quick start</strong><small data-i18n="quickStartSub">Installation & first workflow</small><em>↗</em>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="panel panel-white" id="download" data-section="download">
+      <div class="section-topline dark-line">
+        <h2 data-i18n="downloadTitle">Download</h2>
+        <span data-i18n="downloadMeta">GitHub Releases · Platform-aware</span>
+      </div>
+
+      <div class="download-intro reveal">
+        <p class="oversized" data-i18n-html="downloadStatement">Get Moleku.<br><span>Use the right build.</span></p>
+        <p data-i18n="downloadLead">
+          Your operating system is detected automatically. You can still choose another build or open the complete release list.
+        </p>
+      </div>
+
+      <div class="downloads reveal">
+        <article class="download-row" data-download-card="windows">
+          <span class="download-index">01</span>
+          <div class="download-os"><strong>Windows</strong><small>Windows 10 / 11 · x64</small></div>
+          <div class="download-asset" data-asset="windows">Checking current release…</div>
+          <button type="button" data-download="windows"><span data-i18n="downloadButton">Download</span><b>↓</b></button>
+        </article>
+        <article class="download-row" data-download-card="mac-arm">
+          <span class="download-index">02</span>
+          <div class="download-os"><strong>macOS</strong><small>Apple Silicon · M1+</small></div>
+          <div class="download-asset" data-asset="mac-arm">Checking current release…</div>
+          <button type="button" data-download="mac-arm"><span data-i18n="downloadButton">Download</span><b>↓</b></button>
+        </article>
+        <article class="download-row" data-download-card="mac-intel">
+          <span class="download-index">03</span>
+          <div class="download-os"><strong>macOS</strong><small>Intel</small></div>
+          <div class="download-asset" data-asset="mac-intel">Checking current release…</div>
+          <button type="button" data-download="mac-intel"><span data-i18n="downloadButton">Download</span><b>↓</b></button>
+        </article>
+        <article class="download-row" data-download-card="linux">
+          <span class="download-index">04</span>
+          <div class="download-os"><strong>Linux</strong><small>64-bit · AppImage preferred</small></div>
+          <div class="download-asset" data-asset="linux">Checking current release…</div>
+          <button type="button" data-download="linux"><span data-i18n="downloadButton">Download</span><b>↓</b></button>
+        </article>
+      </div>
+
+      <div class="download-footer reveal">
+        <span id="platformStatus">Detecting your platform…</span>
+        <a href="https://github.com/pipelzm/Moleku/releases" target="_blank" rel="noopener" data-i18n="allReleases">View all releases ↗</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-brand-block">
+        <img src="assets/moleku-wordmark-navy.png" alt="Moleku">
+        <p data-i18n="footerCopy">Open-source scientific software for reaction-driven virtual library workflows.</p>
+      </div>
+
+      <div class="footer-meta-block">
+        <div class="footer-meta-row">
+          <span>© 2026 SB²CS®</span>
+          <span>Moleku · Apache License 2.0</span>
+        </div>
+        <div class="footer-powered">Powered by GitHub Pages &amp; RAVEN | プログラム</div>
+      </div>
+    </footer>
+  </main>
+
+  <dialog id="macDialog" class="mac-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <span class="dialog-kicker" data-i18n="macKicker">macOS download</span>
+    <h2 data-i18n="macTitle">Which Mac do you have?</h2>
+    <p data-i18n="macText">Some browsers do not expose processor architecture reliably. Choose the version that matches your Mac.</p>
+    <div class="mac-options">
+      <button type="button" data-dialog-download="mac-arm"><strong>Apple Silicon</strong><span>M1, M2, M3, M4, M5…</span></button>
+      <button type="button" data-dialog-download="mac-intel"><strong>Intel</strong><span>Intel-based Mac</span></button>
+    </div>
+    <small data-i18n-html="macHelp">Not sure? Open <strong>Apple menu → About This Mac</strong> and check “Chip” or “Processor”.</small>
+  </dialog>
+
+  <script src="js/app.js?v=20260820-platform"></script>
+</body>
+</html>
