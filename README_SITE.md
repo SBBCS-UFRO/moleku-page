@@ -1,8 +1,4 @@
-# Moleku — editorial / Strida-inspired GitHub Pages build
-
-This is an original static Moleku site that recreates the **editorial sidebar, full-screen presentation rhythm, large typography, sticky navigation, and restrained motion language** that made the referenced Strida template appealing.
-
-It does **not** copy Strida's source code, text, CMS, or proprietary Framer implementation.
+# Moleku GitHub Pages build
 
 ## Structure
 
